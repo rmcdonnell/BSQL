@@ -4,6 +4,11 @@
 """
 Author: Bobby McDonnell
 Date: 12/17/2015
+
+Heirarchy:
+BSQL > database > table > record
+
+The environment in which databases, tables, and records exist
 """
 # create a table class
 # create a db class

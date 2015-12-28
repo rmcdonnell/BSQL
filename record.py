@@ -4,6 +4,9 @@
 """
 Author: Bobby McDonnell
 Date: 12/17/2015
+
+Heirarchy:
+BSQL > database > table > record
 """
 
 from table import table
