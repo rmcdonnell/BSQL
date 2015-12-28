@@ -1,5 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
+# python 3.5.1
 """
 An attempt at creating a SQL-like database in python, without using any SQL-like packages
 Author: Bobby McDonnell
@@ -36,17 +37,18 @@ class BQL(object):
             table_collection.update({name:table()})
  
 class table(BSQL):
- 
-    def __init__(self, record_list):
-        self.table = record_list
-        self.cur_index = 0
-        self.current_position = record_list[self.cur_index]
-        self.last_index = len(self.table)
+    # create tablename (stuff int, things, str, ...)
+    # Inputs:
+    # nametype ~ tuple (or list of tuples) of length 2, (str name, type)
+    def __init__(self, nametype):
+        self._nametype = nametype
+    
     # make the table itterable
     def __iter__(self):
         return self
+
     def __next__(self):
- 
+
     #
     def insert(self,var_names,var_types):
         self.var_names = var_names
