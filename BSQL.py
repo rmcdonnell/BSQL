@@ -18,14 +18,10 @@ the actual value.
 later, to mimic salesforce, could create an OO-like structure where the records will be the
 objects (will define what an obect is later...)
 """
- 
-class record(object):
-   
-    def __init__(self,...):
-        pass
+
  
  
-class BQL_db(record):
+class BQL(object):
     # a database is a collection of tables
     table_count = 0
     table_collection = {}
@@ -39,7 +35,7 @@ class BQL_db(record):
         else:
             table_collection.update({name:table()})
  
-class table(record):
+class table(BSQL):
  
     def __init__(self, record_list):
         self.table = record_list
@@ -59,5 +55,8 @@ class table(record):
     def select(self,...):
         pass
  
-    def
+class record(table):
+   
+    def __init__(self,...):
+        pass
 
